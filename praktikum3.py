@@ -1,22 +1,22 @@
+# TUGAS 1
 def converts_temperature(value, unit):
-    "Fungsi konversi suhu Celsius dan Fahrenheit"
-    if unit == 'C' or unit == 'c':
-        return (value * 9/5) + 32
-    elif unit == 'F' or unit == 'f':
+    if unit == 'C':
+        return value * 9/5 + 32
+    elif unit == 'F':
         return (value - 32) * 5/9
-    else:
-        return None
 
-input_value = float(input("Masukkan value : "))
-input_unit = input("Masukkan unit  : ")
+input_value = int(input("Masukkan value : "))
+input_unit = input("Masukkan unit : ")
+
 konversi = converts_temperature(input_value, input_unit)
 
-# Menampilkan Hasil
-if input_unit == 'C' or input_unit == 'c':
-    print("Hasil konversi ke Fahrenheit:", konversi)
-elif input_unit == 'F' or input_unit == 'f':
-    print("Hasil konversi ke Celsius   :", konversi)
+if input_unit == 'C':
+    print("Hasil:", konversi)
 else:
-    print("Unit tidak valid!")
+    print("Hasil:", konversi)
 
-print("\n" + "="*40 + "\n")
+
+# TUGAS 2
+luas_lingkaran = lambda r: 3.14 * r ** 2
+input_r = float(input("\nMasukkan r : "))
+print("Luas :", luas_lingkaran(input_r))
